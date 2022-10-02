@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weatherapp/main.dart';
 import 'package:weatherapp/model/weather_data_current.dart';
 import 'package:weatherapp/utils/custom_colors.dart';
 
