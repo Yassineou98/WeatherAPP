@@ -19,8 +19,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+        Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      body: SafeArea(
+      body: Center(
         child: Obx(() => globalController.checkLoading().isTrue
             ? const Center(
                 child: CircularProgressIndicator(),
@@ -30,22 +32,41 @@ class _HomeScreenState extends State<HomeScreen> {
                   scrollDirection: Axis.vertical,
                   // ignore: prefer_const_literals_to_create_immutables
                   children: [
+                    Container(
+              height: size.height * 0.5,
+              width: size.width,
+
+              decoration:  BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                gradient: const LinearGradient(
+                colors:[ Color.fromARGB(255, 2, 240, 248),
+                         Color(0xff3fa2fa),
+                    ],
+                    begin: Alignment.bottomCenter ,
+                    end: Alignment.topCenter,
+                    stops: [0.05,0.55]
+          ),
+              ),
+       child: Column(
+                  children: [
+
                     const SizedBox(height: 20),
                     const HeaderWidget(),
                     CurrentWeatherWidget(
                       weatherDataCurrent: globalController
-                          .getwWeatherData()
+                          .getWeatherData()
                           .getCurrentWeather(),
-                    ),
+            ),
+                    ]  )),
                     HourlyWeatherWidget(
                       weatherDataHourly:
-                          globalController.getwWeatherData().getHourlyWeather(),
+                          globalController.getWeatherData().getHourlyWeather(),
                     ),
                     DailyWeatherWidget(
                         weatherDataDaily: globalController
-                            .getwWeatherData()
+                            .getWeatherData()
                             .getDailyWeather()),
-                  ],
+                 ],
                 ),
               )),
       ),

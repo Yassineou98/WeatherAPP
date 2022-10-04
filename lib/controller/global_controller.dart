@@ -15,7 +15,7 @@ class GlobalController extends GetxController {
   RxDouble getLongitude() => _longitude;
   final weatherData = WeatherData().obs;
 
-  WeatherData getwWeatherData(){
+  WeatherData getWeatherData(){
     return weatherData.value;
   }
   
@@ -31,6 +31,7 @@ class GlobalController extends GetxController {
     }
     super.onInit();
   }
+  
 
   getLocation() async {
     bool isServiceEnabled;
@@ -67,6 +68,7 @@ class GlobalController extends GetxController {
       });
 
     });
+    
   }
 
 

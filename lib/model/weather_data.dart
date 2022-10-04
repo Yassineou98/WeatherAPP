@@ -13,5 +13,5 @@ class WeatherData{
     WeatherDataCurrent getCurrentWeather() => current!;
     WeatherDataHourly getHourlyWeather() => hourly!;
     WeatherDataDaily getDailyWeather() => daily!;
-  
+
 }

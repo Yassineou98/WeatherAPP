@@ -6,7 +6,7 @@ import 'package:weatherapp/utils/custom_colors.dart';
 class DailyWeatherWidget extends StatelessWidget {
   final WeatherDataDaily weatherDataDaily;
 
-  DailyWeatherWidget({Key? key, required this.weatherDataDaily})
+const DailyWeatherWidget({Key? key, required this.weatherDataDaily})
       : super(key: key);
 
   String getDay(final day) {

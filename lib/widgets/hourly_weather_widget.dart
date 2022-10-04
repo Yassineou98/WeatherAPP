@@ -17,7 +17,9 @@ class HourlyWeatherWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(height: 30,),
         Container(
+          
           margin: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
           alignment: Alignment.topLeft,
           child: const Text("Today", style: TextStyle(fontSize: 18)),
@@ -55,8 +57,8 @@ class HourlyWeatherWidget extends StatelessWidget {
                     ],
                     gradient: cardIndex.value == index
                         ? const LinearGradient(colors: [
-                            CustomColors.firstGradientColor,
-                            CustomColors.secondGradientColor
+                            Color.fromARGB(255, 2, 240, 248),
+                         Color(0xff3fa2fa),
                           ])
                         : null),
                 child: HourlyDetails(

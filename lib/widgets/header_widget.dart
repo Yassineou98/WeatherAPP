@@ -10,6 +10,8 @@ class HeaderWidget extends StatefulWidget {
 
   @override
   State<HeaderWidget> createState() => _HeaderWidgetState();
+
+ 
 }
 
 class _HeaderWidgetState extends State<HeaderWidget> {
@@ -20,11 +22,14 @@ class _HeaderWidgetState extends State<HeaderWidget> {
   final GlobalController globalController =
       Get.put(GlobalController(), permanent: true);
 
+  
+
   @override
   void initState() {
     getAddress(globalController.getLattitude().value,
         globalController.getLongitude().value);
 
+    // ignore: todo
     // TODO: implement initState
     super.initState();
   }
@@ -38,6 +43,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
     });
   }
 
+ 
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -49,7 +55,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 // ignore: prefer_const_constructors
                 style: TextStyle(
                   fontSize: 35,
-                  color: Colors.grey[700],
+                  color: Colors.white,
                   height: 2,
                 ))),
         Container(
@@ -59,7 +65,7 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 // ignore: prefer_const_constructors
                 style: TextStyle(
                   fontSize: 14,
-                  color: Colors.grey[700],
+                  color: Colors.white70,
                   height: 1.5,
                 )))
       ],

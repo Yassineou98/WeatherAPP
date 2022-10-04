@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:weatherapp/screens/first_screen.dart';
 import 'package:weatherapp/screens/home_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     // ignore: prefer_const_constructors
     return GetMaterialApp(
       // ignore: prefer_const_constructors
-      home: HomeScreen(),
+      home: FirstScreen(),
       title: "WeatherAPP",
       debugShowCheckedModeBanner: false,
     );

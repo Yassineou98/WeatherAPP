@@ -119,7 +119,7 @@ class CurrentWeatherWidget extends StatelessWidget {
               style: const TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 60,
-                color: CustomColors.textColorBlack,
+                color: CustomColors.dividerLine,
               )),
         ])),
       ],

@@ -87,7 +87,6 @@ class Temp {
 
  factory Temp.fromJson(Map<String, dynamic> json) => Temp(
         day: (json['day'] as num?)?.round(),
-
         min: (json['min'] as num?)?.round(),
         max: (json['max'] as num?)?.round(),
         night: (json['night'] as num?)?.round(),
